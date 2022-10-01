@@ -1,8 +1,4 @@
 const audio = document.querySelector('audio');
-function playAudio() {
-  audio.currentTime = 0;
-  audio.play();
-}
 const btn = document.querySelector('.button');
 const quotes = document.querySelector('.quotation')
 const url = 'quotation.json';
@@ -13,7 +9,6 @@ async function getData() {
   const data = await res.json();
   console.log(randomNumber);
   quotes.textContent = data[randomNumber].text;
-  playAudio();
 }
 getData();
 
